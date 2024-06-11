@@ -95,109 +95,76 @@
     </div>
     <!-- Breadcrumb End -->
 
-    <!-- Anime Section Begin -->
-    <section class="anime-details spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- INICIO DE LA BOTONERA -->
+  <!-- Anime Section Begin -->
+<section class="anime-details spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- INICIO DE LA BOTONERA -->
                 <div class="anime__details__episodes">
-                        <div class="section-title">
-                            <h5>Servidores</h5>
-                        </div>
-                        <div class="anime-server-buttons">
-                            <a href="#" onClick="mostrarMega();">OPCIÓN 1</a>
-                            <a href="#" onClick="mostrarOkru();">OPCIÓN 2</a>   
-                            <a href="#" onClick="mostrarMixDrop();">OPCIÓN 3</a>
-                        </div>
-                </div>     
-                    <!-- FIN DE LA BOTONERA -->
-                    <!--Aquí van los videos insertados-->
-                    <div id="Mega" class="anime__video__player">
-                        <iframe width="100%" height="480" src="//mega.nz/embed/rQtW0JyL#6TwVeoLWGJzlVuaIbKGSeAlMbNED2aqS2AgderUyTRg" frameborder="0" allow="autoplay"
-                            allowfullscreen>
-                        </iframe>
+                    <div class="section-title">
+                        <h5>Servidores</h5>
                     </div>
-                    <div id="Okru" class="anime__video__player" style="display: none;">
-                        <iframe width="100%" height="480" src="//ok.ru/videoembed/699948610" frameborder="0" allow="autoplay" allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div id="MixDrop" class="anime__video__player" style="display: none;">
-                        <iframe width="100%" height="480" src="//sendvid.com/embed/i0rsurna" frameborder="0" allow="autoplay" allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="cap-navegacion">
-                        <style>
-                            .cap-navegacion{
-                                font-family: "Oswald", sans-serif;
-                                width: 100%;
-                                font-size: 20px;
-                                display: inline-block;
-                                margin-bottom: 5%;
-                                text-align: center;
-                            }
-                            #boton {
-                                color:#ffffff; 
-                                background: #00cefc;
-                                display: inline-block;
-                                color: #ffffff;
-                                margin-left: 5px;
-                                padding: 11px 5px 16px 8px;
-                                border-radius: 4px 4px 4px 4px;
-                                transition: 0.2s;
-                                text-align: center;
-                            }
-                            #boton:hover {
-                                box-shadow: 0 0 5px #00cefc, 0 0 15px #00cefc, 0 0 20px #00cefc;
-                            }
-                        </style>
-                        <a id="boton" class="watch-btn" href="Lackadaisying.html" style="width: 10%">
-                            <span><</span>
-                        </a>			    
-                        <a id="boton" class="watch-btn" href="SINOPSIS.html" style="width: 40%">
-                            <span>Listado de capítulos</span>
-                        </a>
-                        <a id="boton" class="watch-btn" href="CAPITUL10.html" style="width: 10%">
-                            <span>></span>
-                        </a>
+                    <div class="anime-server-buttons">
+                        <a href="#" onClick="mostrarMega();">OPCIÓN 1</a>
+                        <a href="#" onClick="mostrarOkru();">OPCIÓN 2</a>
+                        <a href="#" onClick="mostrarMixDrop();">OPCIÓN 3</a>
                     </div>
                 </div>
-            </div>
-            <p class="cabecera-comentarios">
+                <!-- FIN DE LA BOTONERA -->
+                <!--Aquí van los videos insertados-->
+                <div id="Mega" class="anime__video__player">
+                    <iframe width="100%" height="480" src="//mega.nz/embed/rQtW0JyL#6TwVeoLWGJzlVuaIbKGSeAlMbNED2aqS2AgderUyTRg" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                </div>
+                <div id="Okru" class="anime__video__player" style="display: none;">
+                    <iframe width="100%" height="480" src="//ok.ru/videoembed/699948610" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                </div>
+                <div id="MixDrop" class="anime__video__player" style="display: none;">
+                    <iframe width="100%" height="480" src="//sendvid.com/embed/i0rsurna" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                </div>
+                <div class="cap-navegacion">
                     <style>
-                        .cabecera-comentarios {
-                            color:#ffffff;
-                            font-size: 25px;
+                        .cap-navegacion {
+                            font-family: "Oswald", sans-serif;
+                            width: 100%;
+                            font-size: 20px;
+                            display: inline-block;
+                            margin-bottom: 5%;
                             text-align: center;
-                            font-weight: bold;
+                        }
+                        #boton {
+                            color: #ffffff;
+                            background: #00cefc;
+                            display: inline-block;
+                            color: #ffffff;
+                            margin-left: 5px;
+                            padding: 11px 5px 16px 8px;
+                            border-radius: 4px;
+                            transition: 0.2s;
+                            text-align: center;
+                        }
+                        #boton:hover {
+                            box-shadow: 0 0 5px #00cefc, 0 0 15px #00cefc, 0 0 20px #00cefc;
                         }
                     </style>
-                    ¿Te ha gustado el capítulo? ¡Regálanos un comentario!
-                </p>
-                <!--Aquí comienza la caja de comentarios-->
-                <div id="disqus_thread"></div>
-                    <script>
-                        /**
-                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-                        /*
-                        var disqus_config = function () {
-                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        };
-                        */
-                        (function() { // DON'T EDIT BELOW THIS LINE
-                            var d = document, s = d.createElement('script');
-                            s.src = 'https://fandub-varios.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>        
-                <!--Aquí termina la caja de comentarios-->
+                    <a id="boton" class="watch-btn" href="Lackadaisying.html" style="width: 10%">
+                        <span><</span>
+                    </a>
+                    <a id="boton" class="watch-btn" href="SINOPSIS.html" style="width: 40%">
+                        <span>Listado de capítulos</span>
+                    </a>
+                    <a id="boton" class="watch-btn" href="CAPITUL10.html" style="width: 10%">
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- Anime Section End -->
+    </div>
+</section>
+<!-- Anime Section End -->
+
+<script src="main.js"></script>
+
 
     <!-- Footer Section Begin -->
 <footer class="footer">
