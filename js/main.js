@@ -99,3 +99,38 @@
      });
 
 })(jQuery);
+  
+/*------------------
+        botones
+    --------------------*/
+// Espera a que el DOM esté completamente cargado
+$(document).ready(function() {
+    // Funciones para mostrar los videos correspondientes
+    function mostrarMega() {
+        ocultarTodosLosVideos();
+        $('#Mega').show();
+    }
+
+    function mostrarOkru() {
+        ocultarTodosLosVideos();
+        $('#Okru').show();
+    }
+
+    function mostrarMixDrop() {
+        ocultarTodosLosVideos();
+        $('#MixDrop').show();
+    }
+
+    // Función para ocultar todos los videos
+    function ocultarTodosLosVideos() {
+        $('.anime__video__player').hide();
+    }
+
+    // Asignar las funciones a las opciones del menú
+    $('.anime-server-buttons a').click(function(e) {
+        e.preventDefault(); // Evitar que el enlace haga scroll a la parte superior de la página
+        var targetFunction = $(this).attr('onClick');
+        eval(targetFunction);
+    });
+});
+
