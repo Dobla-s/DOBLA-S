@@ -25,8 +25,71 @@
 	<link rel="stylesheet" href="../../css/style.css" type="text/css">
 
 	<!--Script para mostrar/ocultar videos incrustados-->
-	<script type="text/javascript" src="../../js/mostrar-ocultar.videos.js">
-	</script>
+    <script type="text/javascript" src="../../js/mostrar-ocultar.videos.js"></script>
+    <style>
+        .cap-navegacion {
+            font-family: "Oswald", sans-serif;
+            width: 100%;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 5%;
+            text-align: center;
+        }
+
+        #boton {
+            color: #ffffff;
+            background: #fc8394;
+            display: inline-block;
+            margin-left: 5px;
+            padding: 11px 5px 16px 8px;
+            border-radius: 4px 4px 4px 4px;
+            transition: 0.2s;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #boton:hover {
+            box-shadow: 0 0 5px #fc8394, 0 0 15px #fc8394, 0 0 20px #fc8394;
+        }
+
+        .video-description,
+        #mas-info {
+            margin-bottom: 20px;
+        }
+
+        .show-more {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #mas-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+            min-width: 45%;
+        }
+
+        .column p {
+            margin: 0;
+            color: #ffffff; /* Color blanco */
+        }
+
+        .video-description p {
+            color: #ffffff; /* Color blanco */
+	}
+		
+        .resumen-title {
+            color: #ffffff; /* Color blanco */
+            font-size: 24px; /* Tamaño de fuente ajustable según tu preferencia */
+            font-weight: bold; /* Fuente en negritas */
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+    </style>
 </head>
 
 <body>
@@ -112,6 +175,7 @@
                         </div>
                 </div>     
                     <!-- FIN DE LA BOTONERA -->
+			
                     <!--Aquí van los videos insertados-->
                     <div id="Mega" class="anime__video__player">
                         <iframe width="100%" height="480" src="//mega.nz/embed/rQtW0JyL#6TwVeoLWGJzlVuaIbKGSeAlMbNED2aqS2AgderUyTRg" frameborder="0" allow="autoplay"
@@ -125,6 +189,99 @@
                     <div id="MixDrop" class="anime__video__player" style="display: none;">
                         <iframe width="100%" height="480" src="//sendvid.com/embed/" frameborder="0" allow="autoplay" allowfullscreen>
                         </iframe>
+                    </div>
+			
+			   <!-- Descripción del video -->
+                    <div class="video-description">
+                         <h5 class="resumen-title">Resumen</h5>
+                        <p>
+                           En 1927 y la Prohibición es la ley del país. Para Rocky, Freckle e Ivy, los turnos de noche nunca son aburridos.
+                    </div>
+		   <!-- Botón para mostrar más información -->
+                    <div class="show-more">
+                        <a id="boton" class="watch-btn" onclick="mostrarMasInfo();" style="cursor: pointer; width: 40%">CREDITOS</a>
+                    </div>
+
+                     <!-- Información adicional oculta -->
+                    <div id="mas-info" style="display: none;">
+                        <div class="column">
+		            <p>
+                                <strong>ALAN ALFONSO MUÑOZ (ROCKY RICKABY - NICODEME SAVOY)</strong><br>
+			    </p>
+				
+                            <p>
+                                <strong>AMELISE HERNÁNDEZ (IVY PEPPER)</strong><br>
+                	       IG: <a href="https://www.instagram.com/liss__vinsmoke/" target="_blank">@liss__vinsmoke</a>
+           		    </p>
+
+			    <p>
+                                <strong>AZAF MENDOZA (FRECKLE MCMURRAY)</strong><br>
+                		IG: <a href="https://www.instagram.com/voidicosmic/" target="_blank">@voidicosmic</a>
+                            </p>
+
+			    <p>
+                                <strong>ROCÍO MARTÍNEZ  (SERAFINE SAVOY)</strong><br>
+                		IG: <a href="https://www.instagram.com/cyromarval/" target="_blank">@cyromarval</a><br>
+                		TK: <a href="https://www.tiktok.com/@cyromarval" target="_blank">@cyromarval</a>
+                            </p>
+
+				 <p>
+                                <strong>SALVADOR CARRASCO (MORDECAI HELLER)</strong><br>
+                		IG: <a href="https://www.instagram.com/ronngelmostaza/" target="_blank">@ronngelmostaza</a>
+                            </p>
+				
+                            <p>
+                                <strong>JOHANNE (MARY ELLEN "MITZY" MAY)</strong><br>
+                		IG: <a href="https://www.instagram.com/johanne_official_" target="_blank">@johanne_official_</a><br>
+                		TK: <a href="https://www.tiktok.com/@johanne_official_" target="_blank">@johanne_official_</a><br>
+				YT: <a href="https://www.youtube.com/@johanne_official_" target="_blank">@johanne_official_</a>
+                            </p>
+				
+                             <p>
+                                <strong>JUAN SIERRA (HORATIO BRUNO)</strong><br>
+                		TK: <a href="https://www.tiktok.com/@jc.expert.funko" target="_blank">@jc.expert.funko</a>
+                            </p>
+
+			    <p>
+                                <strong>EVER JUAREZ (SEDGEWICK SABLE)</strong><br>
+                		IG: <a href="https://www.instagram.com/everjuarez_ma_dude/" target="_blank">@everjuarez_ma_dude</a><br>
+                		TK: <a href="https://www.tiktok.com/@joyman3ds" target="_blank">@joyman3ds</a><br>
+				YT: <a href="https://www.youtube.com/joyman4244" target="_blank">@joyman4244</a><br>
+			        TW: <a href="https://www.twitch.tv/JoymanPlays" target="_blank">@JoymanPlays</a>
+                            </p>
+				
+                            <p>
+                                <strong>LUIS ÁVALOS (VICTOR LADISLAV VASKO - DORIAN ZIB ZIBOWSKI)</strong><br>
+                               FB: <a href="https://www.facebook.com/eddx.white.1" target="_blank">@Eddx White</a><br>
+                	       IG: <a href="https://www.instagram.com/luis_4v4los/" target="_blank">@luis_4v4los</a><br>
+                               TK: <a href="https://www.tiktok.com/@luis4valos" target="_blank">@luis4valos</a><br>
+			       YT: <a href="https://www.youtube.com/THEWHIXITO" target="_blank">@TheWhixito</a><br>
+			       TW: <a href="https://www.twitch.tv/thewhixito" target="_blank">@TheWhixito</a>
+                            </p>
+
+		            <p>
+                                <strong>MANUEL PIRI (JJ)</strong><br>
+			    </p>
+				
+                            <p>
+                                <strong>LUKY GALINDO (LADRADOR DE CARNAVAL)</strong><br>
+                                FB: <a href="https://www.facebook.com/lukygalindo" target="_blank">Luky Galindo</a><br>
+                		IG: <a href="https://www.instagram.com/lukygalindo/" target="_blank">@lukygalindo</a><br>
+                		TK: <a href="https://www.tiktok.com/@lukygalindod" target="_blank">@lukygalindod</a>
+                            </p>
+				
+			    <p>
+                                <strong>VALERIA BORBOA (SECRETARIA DE HOTEL MARIBEL)</strong><br>
+                		IG: <a href="https://www.instagram.com/valerybg_voz/" target="_blank">@valerybg_voz</a>
+                            </p>
+
+			    <p>
+                                <strong>ALFONSO LOUSTAUNAU (ASA SWEET)</strong><br>
+                		IG: <a href="https://www.instagram.com/elal.fonso/" target="_blank">@elal.fonso</a>
+                            </p>
+                        </div>
+                    </div>
+                        </p>
                     </div>
                     <div class="cap-navegacion">
                         <style>
@@ -246,7 +403,20 @@
     <script src="../../js/jquery.slicknav.js"></script>
     <script src="../../js/owl.carousel.min.js"></script>
     <script src="../../js/main.js"></script>
-
+<script>
+        function mostrarMasInfo() {
+            var masInfo = document.getElementById("mas-info");
+            if (masInfo.style.display === "none") {
+                masInfo.style.display = "flex";
+                window.scrollTo({
+                    top: masInfo.offsetTop,
+                    behavior: "smooth"
+                });
+            } else {
+                masInfo.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
