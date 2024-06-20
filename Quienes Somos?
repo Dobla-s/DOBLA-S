@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - Estudio de Doblaje y Locución</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Quiénes Somos</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#voices">Banco de Voces</a></li>
+                <li><a href="#demos">Demos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section id="about">
+            <h1>Quiénes Somos</h1>
+            <p>Bienvenidos a nuestro estudio de doblaje y locución comercial. Nos especializamos en todo lo relacionado con la grabación de voz y sonido. Nuestro equipo está compuesto por profesionales con años de experiencia en la industria, dedicados a brindar la mejor calidad en cada proyecto.</p>
+            <p>Nuestro estudio está equipado con tecnología de punta para garantizar la mejor calidad de audio. Nos enorgullecemos de nuestro trabajo y nos aseguramos de que cada proyecto reciba la atención personalizada que se merece.</p>
+        </section>
+
+        <section id="services">
+            <h2>Servicios</h2>
+            <ul>
+                <li>Doblaje de películas y series</li>
+                <li>Locución para comerciales</li>
+                <li>Grabación de audiolibros</li>
+                <li>Producción de podcasts</li>
+                <li>Edición y mezcla de audio</li>
+            </ul>
+        </section>
+
+        <section id="voices">
+            <h2>Banco de Voces</h2>
+            <p>Contamos con una amplia variedad de voces profesionales para cualquier tipo de proyecto. Desde voces jóvenes y enérgicas hasta voces maduras y serias, tenemos la voz perfecta para tu proyecto.</p>
+            <!-- Aquí se puede insertar un carrusel o una galería de las voces disponibles -->
+        </section>
+
+        <section id="demos">
+            <h2>Demos</h2>
+            <p>Escucha algunos de nuestros trabajos previos. Hemos colaborado con una amplia gama de clientes, desde grandes empresas hasta proyectos independientes.</p>
+            <!-- Aquí se pueden insertar reproductores de audio para los demos -->
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta o quieres solicitar un presupuesto, no dudes en contactarnos.</p>
+            <ul>
+                <li>Email: contacto@estudiodoblaje.com</li>
+                <li>Teléfono: +123 456 7890</li>
+                <li>Dirección: Calle Ficticia 123, Ciudad, País</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
