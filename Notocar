@@ -1,0 +1,62 @@
+-- @description Export audio items on selected track(s) as EDL(s)
+-- @version 1.0
+-- @author mrlimbic
+-- @link https://github.com/mrlimbic/reascripts
+-- @about
+--   # Export Audio Items on Selected Tracks as EDL
+--   This script exports audio items on selected tracks as EDL (Edit Decision List) files.
+
+function export_audio_items_as_edl()
+    local num_tracks = reaper.CountSelectedTracks(0)
+    if num_tracks == 0 then
+        reaper.ShowMessageBox("No tracks selected", "Error", 0)
+        return
+    end
+
+    for i = 0, num_tracks - 1 do
+        local track = reaper.GetSelectedTrack(0, i)
+        local _, track_name = reaper.GetSetMediaTrackInfo_String(track, "P_NAME", "", false)
+        local num_items = reaper.CountTrackMediaItems(track)
+        
+        if num_items == 0 then
+            reaper.ShowMessageBox("No media items found on track: " .. track_name, "Error", 0)
+            return
+        end
+
+        local edl_content = "TITLE: " .. track_name .. "\n"
+        edl_content = edl_content .. "FCM: NON-DROP FRAME\n\n"
+
+        for j = 0, num_items - 1 do
+            local item = reaper.GetTrackMediaItem(track, j)
+            local take = reaper.GetActiveTake(item)
+            if take then
+                local item_start = reaper.GetMediaItemInfo_Value(item, "D_POSITION")
+                local item_length = reaper.GetMediaItemInfo_Value(item, "D_LENGTH")
+                local item_end = item_start + item_length
+                local take_name = reaper.GetTakeName(take)
+                
+                local item_start_timecode = reaper.format_timestr_pos(item_start, "", 0)
+                local item_end_timecode = reaper.format_timestr_pos(item_end, "", 0)
+                
+                edl_content = edl_content .. string.format("001  AX       V     C        %s %s %s %s\n", item_start_timecode, item_end_timecode, item_start_timecode, item_end_timecode)
+                edl_content = edl_content .. "* FROM CLIP NAME: " .. take_name .. "\n\n"
+            end
+        end
+
+        local retval, file_path = reaper.GetUserFileNameForSave(track_name .. ".edl", "Save EDL", ".edl")
+        if retval then
+            local file = io.open(file_path, "w")
+            if file then
+                file:write(edl_content)
+                file:close()
+                reaper.ShowMessageBox("EDL exported: " .. file_path, "Success", 0)
+            else
+                reaper.ShowMessageBox("Could not open file for writing: " .. file_path, "Error", 0)
+            end
+        end
+    end
+end
+
+export_audio_items_as_edl()
+reaper.defer(function() end)
+
