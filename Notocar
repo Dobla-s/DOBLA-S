@@ -43,8 +43,8 @@ function export_audio_items_as_edl()
             end
         end
 
-        local retval, file_path = reaper.GetUserFileNameForSave(track_name .. ".edl", "Save EDL", ".edl")
-        if retval then
+        local retval, file_path = reaper.JS_Dialog_BrowseForSaveFile("Save EDL", "", track_name .. ".edl", "")
+        if retval and file_path then
             local file = io.open(file_path, "w")
             if file then
                 file:write(edl_content)
@@ -55,6 +55,12 @@ function export_audio_items_as_edl()
             end
         end
     end
+end
+
+-- Ensure the JS_ReaScriptAPI extension is available
+if not reaper.APIExists("JS_Dialog_BrowseForSaveFile") then
+    reaper.ShowMessageBox("This script requires the JS_ReaScriptAPI extension. Please install it from ReaPack.", "Error", 0)
+    return
 end
 
 export_audio_items_as_edl()
