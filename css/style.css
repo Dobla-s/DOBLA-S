@@ -36,7 +36,7 @@ body {
 	height: 100%;
 	font-family: "Mulish", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	background: #080808;
+	background: #000000;
 }
 
 h1,
@@ -576,7 +576,7 @@ ol {
 	font-size: 36px;
 	height: 66px;
 	width: 66px;
-	background: #080808;
+	background: #000000;
 	line-height: 66px;
 	text-align: center;
 	color: #ffffff;
